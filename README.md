@@ -1,6 +1,7 @@
 # Simple Tic Tac Toe Application with Difficulties
 
 This is a minimal Tic Tac Toe application written in C++ using the SDL library. It features both two-player and one-player modes with three difficulty levels: easy, medium, and hard.
+**Note**: This project is compatible only with Linux and Unix systems.
 
 ## Table of Contents
 
@@ -37,7 +38,7 @@ git clone https://github.com/eulmlk/Tic_Tac_Toe.git
 2. Compile the code:
 
 ```bash
-cd tic-tac-toe-sdl
+cd Tic_Tac_Toe
 g++ -std=c++17 src/*.cpp -I include/ -o TicTacToe -lSDL2 -lSDL2_ttf
 ```
 
