@@ -18,9 +18,7 @@ This is a minimal Tic Tac Toe application written in C++ using the SDL library. 
 
 - Two-player mode: Play against a friend locally.
 - One-player mode: Challenge the computer with different difficulty levels.
-- Minimalistic user interface for a seamless gaming experience.
 - Multiple difficulty levels to suit different player preferences.
-- Clean and well-commented C++ codebase.
 
 ## Requirements
 
