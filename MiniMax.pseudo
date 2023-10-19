@@ -1,0 +1,43 @@
+
+function searchMoves(position = startpos, turn = white, depth = -1) {
+    if (depth = 0 || isGameOver())
+        return (evaluate(position), null);
+
+    if (turn = white) {
+        maxScore = negativeInfinity;
+        moves = generateMoves(position, turn);
+        bestMove = null;
+
+        foreach (move in moves) {
+            position = makeMove(position, move);
+
+            eval = searchMoves(position, black, depth - 1).first;
+            if (eval > maxScore) {
+                maxScore = eval;
+                bestMove = move;
+            }
+
+            position = unmakeMove(position, move);
+        }
+
+        return (maxScore, bestMove);
+    } else if (turn = black) {
+        minScore = positiveInfinity;
+        moves = generateMoves(position, turn);
+        bestMove = null;
+
+        foreach (move in moves) {
+            position = makeMove(position, move);
+
+            eval = searchMoves(position, white, depth - 1).first;
+            if (eval < minScore) {
+                minScore = eval;
+                bestMove = move;
+            }
+
+            position = unmakeMove(position, move);
+        }
+
+        return (minScore, bestMove);
+    }
+}
